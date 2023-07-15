@@ -1,0 +1,289 @@
+* {
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.main-head {
+	font-family: 'Dancing Script', cursive;
+	font-size: 50px;
+	font-weight: bolder;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.App {
+	background: url(./bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.todo-whole {
+	display: grid;
+	/* border: 2px solid #f76707; */
+	grid-template-columns: repeat(2, 0.5fr);
+}
+
+.input {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100px;
+	/* border: 2px solid #f76707; */
+	margin-bottom: 50px;
+}
+
+.input-title input {
+	caret-color: #f08080;
+	border: none;
+	height: 50px;
+	width: 500px;
+	border-radius: 20px;
+	padding-left: 20px;
+	font-family: 'Pangolin', cursive;
+}
+
+.input-title input:focus {
+	border: 4px solid #faa693;
+	outline: none;
+}
+
+.input-desc input {
+	caret-color: #f08080;
+	border: none;
+	height: 50px;
+	width: 500px;
+	border-radius: 20px;
+	padding-left: 20px;
+	font-family: 'Pangolin', cursive;
+}
+
+.input-desc input:focus {
+	border: 4px solid #faa693;
+	outline: none;
+}
+
+.input-add input {
+	font-family: 'Pangolin', cursive;
+	font-size: large;
+	font-weight: bold;
+	height: 50px;
+	border-radius: 50px;
+	width: 100px;
+	background-color: #f08080;
+	outline: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+.input-add input:hover {
+	background-color: #ee7474;
+}
+
+.to-do {
+	/* border: 2px solid #C68EA0; */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 422px;
+	margin-left: 30px;
+}
+
+.complete {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	/* border: 2px solid #C68EA0; */
+	margin-left: 20px;
+}
+
+.another-div {
+	padding: 10px;
+	height: fit-content;
+	width: fit-content;
+	border: 4px solid #f8ad9d;
+	border-top: 0;
+	background-color: #fce2cb;
+	border-radius: 0px 0px 12px 12px;
+	min-height: 250px;
+	min-width: 320px;
+	max-height: 250px;
+	overflow: auto;
+}
+
+.another-div::-webkit-scrollbar {
+	width: 10px;
+}
+
+.another-div::-webkit-scrollbar-track {
+	background: #fce2cb;
+}
+
+.another-div::-webkit-scrollbar-thumb {
+	background-color: #f59292;
+	border-radius: 20px;
+	border: 3px solid #fce2cb;
+}
+
+.head {
+	border: 4px solid #f8ad9d;
+	border-bottom: 0;
+	border-radius: 12px 12px 0px 0px;
+	background-color: #fce2cb;
+	min-width: 340px;
+	font-family: 'Pangolin', cursive;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: underline;
+	color: #f08080;
+}
+
+.todo-list-item h3,
+p {
+	display: flex;
+	margin-left: 20px;
+	font-family: 'Dancing Script', cursive;
+}
+
+.todo-list-item {
+	border: 3px dotted #f8ad9d;
+	border-left: 0;
+	border-right: 0;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.small-head {
+	margin-right: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.small-head span {
+	cursor: pointer;
+}
+
+.icons {
+	display: flex;
+	justify-content: space-between;
+	width: 70px;
+}
+
+.del {
+	font-weight: 500;
+}
+
+.right {
+	font-weight: 500;
+}
+
+.del:hover {
+	color: #ee7474;
+}
+
+.right:hover {
+	color: #ee7474;
+}
+
+.cmpltd {
+	font-family: 'Pangolin', cursive;
+	margin-left: 20px;
+	font-size: 13px;
+	color: #6c757d;
+}
+
+@media (max-width: 768px) {
+	.input-title input {
+		width: 330px;
+	}
+
+	.input-desc input {
+		width: 270px;
+	}
+
+	.to-do {
+		margin-left: 0;
+
+	}
+
+	.input-add input {
+		width: 80px;
+	}
+
+	.another-div {
+		min-width: 300px;
+	}
+
+	.head {
+		min-width: 320px;
+	}
+}
+
+@media (max-width: 540px) {
+	.App {
+		overflow-y: auto;
+	}
+
+	.main-head {
+		font-size: 32px;
+	}
+
+	.input {
+		flex-direction: column;
+		height: 200px;
+	}
+
+	.input-title input {
+		width: 330px;
+		margin: 10px 0px;
+	}
+	.input-title input::-webkit-selection {
+		color: white;
+		background: #ee7474;
+	  }
+	.input-desc input {
+		width: 330px;
+		margin: 12px 0px;
+
+	}
+
+	.to-do {
+		margin-left: 0;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		height: 360px;
+	}
+
+	.complete {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		margin-bottom: 30px;
+	}
+
+	.input-add input {
+		width: 330px;
+	}
+
+	.another-div {
+		min-width: 300px;
+	}
+
+	.head {
+		min-width: 320px;
+	}
+}
